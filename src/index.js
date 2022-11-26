@@ -1,5 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import DB_CONFIG from './config.json'
 
 const app = express()
 
@@ -18,6 +19,6 @@ app.post('/',(request, response)=>{
 });
 
 (async()=>{
-    const db = await mongoose.connect('mongodb+srv://admin:Wi6G96YmCA60fc9m@cluster0.gfhuiwi.mongodb.net/?retryWrites=true&w=majority')
+    const db = await mongoose.connect(DB_CONFIG.MONGODB_URI)
     console.log('Conectado a la base de datos: ', db.connection.name)
 })()

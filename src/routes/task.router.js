@@ -7,8 +7,13 @@ router.post('/', taskCtrl.newTask)
 
 router.get('/', taskCtrl.findAllTasks)
 
+router.get('/search', taskCtrl.findByName)
+
+router.get('/:id', taskCtrl.findOneTask)
+
 router.delete('/:id', taskCtrl.deleteByID)
 
 router.put('/:id',taskCtrl.updateByID)
+
 
 export default router

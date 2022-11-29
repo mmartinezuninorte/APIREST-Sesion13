@@ -6,7 +6,7 @@ ELEMENTOS DE UNA TAREA:
 - ESTADO - done boolean false o true
 
 */
-
+//creando el esquema de tareas y utilizando model para trabajar con funciones basicas de CRUD
 import { Schema, model } from "mongoose";
 
 const taskSchema = new Schema ({

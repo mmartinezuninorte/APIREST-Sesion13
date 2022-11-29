@@ -77,7 +77,7 @@ export const findByName = async (request, response)=>{
         return response.status(400).json({message:"El campo title es requerido"})
     }
     try {
-        const result = await  Task.find({title: search})
+        const result = await  Task.find({title: { $regex: search, $options: 'i' }})
         if (result.length === 0){
             return response.status(404).json({message:"No se encontraron coincidencias"})
         }

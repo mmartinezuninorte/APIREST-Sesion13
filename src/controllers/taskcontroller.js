@@ -30,7 +30,6 @@ export const findAllTasks = async (request, response)=>{
             message: 'Error al consultar las tareas'
         })
     }
-    
 }
 
 export const deleteByID = async (request, response)=>{
@@ -70,6 +69,7 @@ export const findOneTask = async (request, response)=>{
         })
     } 
 }
+
 
 export const findByName = async (request, response)=>{
     const search = request.body.title
